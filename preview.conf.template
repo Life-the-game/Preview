@@ -1,0 +1,36 @@
+<!-- ----------------------------------------------------------------------- -->
+<!-- Project: Life - the game, Preview Website                               -->
+<!-- Author: db0 (db0company@gmail.com, http://db0.fr/)                      -->
+<!-- Latest Version is on GitHub: https://github.com/Life-the-game/Preview   -->
+<!-- ----------------------------------------------------------------------- -->
+
+<ocsigen>
+
+  <server>
+
+    <port>__PORT</port>
+
+    <logdir>/home/__USER/tmp/</logdir>
+    <datadir>/home/__USER/tmp/</datadir>
+    <user></user>
+    <group></group>
+    <commandpipe>/home/__USER/tmp/ocsigen_command</commandpipe>
+    <mimefile>/usr/local/etc/ocsigenserver/mime.types</mimefile>
+
+    <extension findlib-package="ocsigenserver.ext.ocsipersist-sqlite">
+      <database file="/home/__USER/tmp/ocsidb"/>
+    </extension>
+    <extension findlib-package="ocsigenserver.ext.staticmod"/>
+    <extension findlib-package="eliom.server"/>
+
+    <charset>utf-8</charset>
+    <debugmode/>
+
+    <host hostfilter="*">
+      <static dir="__PWD/static/" />
+      <eliom module="__PWD/_server/preview.cmo" />
+    </host>
+
+  </server>
+
+</ocsigen>

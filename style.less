@@ -1,0 +1,62 @@
+// ************************************************************************* //
+// Project: Life - the game, Preview Website                                 //
+// Author: db0 (db0company@gmail.com, http://db0.fr/)                        //
+// Latest Version is on GitHub: https://github.com/Life-the-game/Preview     //
+// ************************************************************************* //
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,900);
+
+body {
+    background-image: url('bg.jpg');
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.font-effect-anaglyph(@left:red, @right:cyan) {
+  text-shadow: -0.06em 0 @left, 0.06em 0 @right;
+}
+
+.font-effect-outline(@color:#000) {
+  text-shadow:0 1px 1px @color, 0 -1px 1px @color, 1px 0 1px @color, -1px 0 1px @color;
+}
+
+h1, h2, h3 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+}
+
+h1, h3 {
+    font-weight: 300;
+}
+
+h1 {
+    margin-top: -130px;
+    margin-left: -300px;
+    font-size: 60px;
+    small {
+	font-size: 20px;
+	margin-left: 10px;
+    }
+}
+
+a {
+    color: white;
+    h3 {
+	margin-top: 50px;
+	margin-left: 160px;
+	font-size: 20px;
+	&:hover {
+	    color: white;
+	    border-bottom: 1px white solid;
+	}
+    }
+}
+
+h2 {
+    .font-effect-outline(teal);
+    font-weight: 900;
+    font-size: 100px;
+    margin-top: -70px;
+    margin-left: (600px/2)*-1;
+}
